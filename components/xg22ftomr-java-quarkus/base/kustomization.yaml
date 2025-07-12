@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: xg22ftomr-java-quarkus
+  janus-idp.io/tekton: xg22ftomr-java-quarkus
+  backstage.io/kubernetes-id: xg22ftomr-java-quarkus
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: xg22ftomr-java-quarkus
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
